@@ -1,27 +1,22 @@
-// Récuparation du formulaire
 const form = document.getElementById('form');
 
-// Ajout de d'un écouteur d'évènement,
+
+// Ajout des variables
+const firstNameInput = document.querySelector('#firstName');
+const lastNameInput = document.querySelector('#lastName');
+const phoneInput = document.querySelector('#phone');
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+
+const firstNameError = document.querySelector('#firstNameError');
+const lastNameError = document.querySelector('#lastNameError');
+const phoneError = document.querySelector('#phoneError');
+const emailError = document.querySelector('#emailError');
+const passwordError = document.querySelector('#passwordError');
+
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    const firstNameInput = document.querySelector('#firstName');
-    const lastNameInput = document.querySelector('#lastName');
-    const phoneInput = document.querySelector('#phone');
-    const emailInput = document.querySelector('#email');
-    const passwordInput = document.querySelector('#password');
-
-    const firstNameError = document.querySelector('#firstNameError');
-    const lastNameError = document.querySelector('#lastNameError');
-    const phoneError = document.querySelector('#phoneError');
-    const emailError = document.querySelector('#emailError');
-    const passwordError = document.querySelector('#passwordError');
-    
-    firstNameError.style.display = 'none';
-    lastNameError.style.display = 'none';
-    phoneError.style.display = 'none';
-    emailError.style.display = 'none';
-    passwordError.style.display = 'none';
 
     const formData = {
         firstName: firstNameInput.value,
@@ -72,7 +67,13 @@ form.addEventListener('submit', (event) => {
     }
 
     if (!Object.values(errors).includes(true)) {
-        console.log(formData)
+        console.log(formData);
+        form.reset();
     }
 
+})
+
+const reset = document.querySelector('.reset')
+reset.addEventListener('click', () => {
+    form.reset();
 })
