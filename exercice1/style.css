@@ -1,0 +1,44 @@
+main {
+    margin: 100px auto;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 20px; 
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0px;
+    padding: 2px 2px;
+    width: 270px;
+}
+
+.error_message {
+    color: red;
+    font-style: italic;
+    font-size: 10pt;
+    display: none;
+}
+
+input {
+    height: 20px;
+}
+
+.password {
+    width: 100%;
+}
+
+.form__button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
