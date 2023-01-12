@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Exercice1</title>
+</head>
+<body>
+    <!-- nom, email, numéro de téléphone, mot de passe, submit -->
+    <main class="main">
+        <form class="form" action="#" method="post" id="form">
+            <div>
+                <input class="form__input" type="text" name="firstName" id="firstName"  placeholder="Prénom">
+                <label class="error_message" for="firstName" id="firstNameError">Veuillez saisir votre prénom</label>
+            </div>
+
+            <div>
+                <input class="form__input" type="text" name="lastName" id="lastName" placeholder="Nom">
+                <label class="error_message" for="lastName" id="lastNameError">Veuillez saisir votre nom</label>
+            </div>
+
+            <div>
+                <input class="form__input" type="tel"  name="phone" id="phone" placeholder="+33(0)612121212">
+                <label class="error_message" for="phone"  id="phoneError">Veuillez saisir votre numéro de téléphone</label>
+            </div>
+
+            <div>
+                <input class="form__input" type="email" name="email" id="email" placeholder="E-mail">
+                <label class="error_message" for="email" id="emailError">Veuillez saisir une adresse e-mail valide</label>
+            </div>
+
+            <div class="password">
+                <input class="form__input" type="password"  name="password" id="password" placeholder="Mot de passe">
+                <label class="error_message" for="password"  id="passwordError">Votre mot de passe doit contenir au moins une minuscule, une majuscule, un chiffre et un caractère spécial</label>
+            </div>
+
+            <div class="form__button">
+            <button class="form__submit" type="submit">S'enregistrer</button>
+
+            <button class="form__reset">Effacer</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
