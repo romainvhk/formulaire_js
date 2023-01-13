@@ -10,16 +10,75 @@
 <body>
     <main>
         <form class="form" action="#" method="post">
-            <div>
-                <input type="text">
+            <div class="user">
+                <div class="form__firstName">
+                    <input class="form__input" type="text" name="firtsName" id="firstName" placeholder="Prénom">
+                    <label class="error_message" for="firstName" id="firstNameError">Veuillez saisir votre prénom</label>
+                </div>
+                
+                <div class="form__lastName">
+                    <input class="form__input" type="text" name="lastName" id="lastName" placeholder="Nom">
+                    <label class="error_message" for="lastName" id="lastNameError">Veuillez saisir votre nom</label>
+                </div>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+            <div class="form__phone">
+                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Tel : +33(0)600000000">
+                <label class="error_message" for="phone" id="phoneError">Veuillez saisir un numéro de téléphone valide</label>
+            </div>
+
+            <div class="adresse__street">   
+                <input class="form__input" type="text" name="street" id="street" placeholder="Rue">
+                <label class="error_message" for="street" id="streetError">Veuillez saisir votre rue</label>
+            </div>
+
+            <div class="form__adresse">
+                <div class="adresse__codePostal">
+                    <input class="form__input" type="text" name="codePostal" id="codePostal" placeholder="Ex : 62000">
+                    <label class="error_message" for="codePostal" id="codePostalError">Veuillez saisir votre code postal</label>
+                </div>
+               
+                <div class="adresse__city">
+                    <input class="form__input" type="text" name="city" id="city" placeholder="Ville">
+                    <label class="error_message" for="city" id="cityError">Veuillez saisir votre ville</label>
+                </div>
+            </div>
+
+            <h2>Taille de la pizza</h2>
+            <div class="pizza__size">
+                <div>
+                    <input type="radio" name="small" id="small">
+                    <label for="small">S</label>
+                </div>
+                <div>
+                    <input type="radio" name="medium" id="medium">
+                    <label for="medium">M</label>
+                </div>
+                <div>
+                    <input type="radio" name="large" id="large">
+                    <label for="large">L</label>
+                </div>
+            </div>
+
+            <h2>Ingrédients</h2>
+            <div class="ingrédients">
+                <label for="viande">Viande</label>
+                <select name="viande" id="viande">
+                    <option value="" id="viande_null">--Veuillez choisir votre viande--</option>
+                    <option value="boeuf_haché" id="boeuf">boeuf haché</option>
+                    <option value="poulet" id="poulet">poulet</option>
+                    <option value="jambon" id="jambon">jambon</option>
+                </select>
+                <label class="error_message" for="viande" id="viandeError">Veuillez choisir une viande</label>
+                <p>Toutes nos pizzas sont à la sauce tomate et au gruyère rapé</p>
+            </div>
+
+            <textarea name="commentaires" id="commentaires" cols="30" rows="10" placeholder="Commentaires"></textarea>
+
+            <button class="form__submit" type="submit">Commander</button>
         </form>
+        <button class="reset">Annuler</button>
+
     </main>
     <script src="./app.js"></script>
 </body>
