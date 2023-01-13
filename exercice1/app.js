@@ -34,11 +34,10 @@ form.addEventListener('submit', (event) => {
         password : false,
     }
 
-    if (!formData.firstName || !formData.lastName || !formData.phone || !formData.email || !formData.password) {
         const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
         const phoneRegex = /^((\+)33|0)[1-9](\d{2}){4}$/g;
         const nameRegex = /^[a-zA-Z ]+$/;
-        const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/gm;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_])[A-Za-z\d$@$!%*?&_]{8,50}$/;
 
         if (!formData.firstName || !nameRegex.test(formData.firstName)) {
             errors.firstName = true;
@@ -59,12 +58,11 @@ form.addEventListener('submit', (event) => {
             errors.email = true;
             emailError.style.display = 'block';
         }
-
-        if (!formData.password || !passwordRegex.test(formData.password)) {
+        
+        if ((!formData.password ||!passwordRegex.test(formData.password)) ) {
             errors.password = true;
             passwordError.style.display = 'block';
         }
-    }
 
     if (!Object.values(errors).includes(true)) {
         console.log(formData);
