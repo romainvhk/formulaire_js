@@ -1,90 +1,105 @@
 body {
-    background-color: rgb(131, 36, 36);
     font-family: arial;
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    border: 1px solid black;
+    height: 300px;
+    background-image: url(../image/pexels-muffin-creatives-1653877.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header, main {
+    width: 800px;
+    margin: 0px auto;
 }
 
 main {
-    background-color: white;
-    margin: 100px auto;
-    padding: 30px;
-    width: 700px;
     border: 1px solid black;
-    border-radius: 20px;
-    box-shadow:  5px 5px 5px #ff0000, -5px -5px 5px #ff0000;
+    background-color: white;
+}
+
+form {
     display: flex;
     flex-direction: column;
-}
-
-input {
-    height: 20px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.user {
-    display: flex;
     justify-content: center;
-    gap: 15px;
+    padding: 30px;
+    gap: 30px;
 }
 
-.form__firstName, .form__lastName {
+.form__coordonnees {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.name, .phone, .adresse {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 100%;
 }
 
-.form__phone {
+.form__size {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
 
-.form__adresse {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.adresse__street {
+#size, #sizeError {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
-.adresse__codePostal, .adresse__town {
+.form__choixPizza {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+#choixPizza, #choixError {
     width: 100%;
 }
 
 .error_message {
-    color: blue;
+    color: red;
     font-style: italic;
     font-size: 10pt;
     display: none;
 }
 
-.pizza__size {
-    display: flex;
-    justify-content: space-around;
+input {
+    height: 20px;
+    border-radius: 12px;
+    padding: 10px;
 }
 
-p {
-    font-size: 10pt;
+h2 {
     font-style: italic;
+    text-decoration: underline;
+}
+
+select {
+    height: 30px;
+    border-radius: 12px;
+    padding: 0px 10px;
+    cursor: pointer;
 }
 
 textarea {
+    border-radius: 12px;
     resize: none;
+    padding: 10px;
 }
 
 button {
-    background-color: rgb(131, 36, 36);
-    border: none;
-    height: 40px;
-    color: white;
+    border-radius: 12px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13pt;
 }

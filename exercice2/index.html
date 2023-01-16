@@ -8,78 +8,67 @@
     <title>Exercice2</title>
 </head>
 <body>
+    <header>
+
+    </header>
+
     <main>
         <form class="form" action="#" method="post">
-            <div class="user">
-                <div class="form__firstName">
-                    <input class="form__input" type="text" name="firtsName" id="firstName" placeholder="Prénom">
-                    <label class="error_message" for="firstName" id="firstNameError">Veuillez saisir votre prénom</label>
+            <div class="form__coordonnees">
+                <h2>Coordonnées</h2>
+                
+                <div class="name">
+                    <input type="text" name="name" id="name" placeholder="Prénom Nom">
+                    <label class="error_message" for="name" id="nameError">Veuillez saisir votre prénom et votre nom</label>
                 </div>
                 
-                <div class="form__lastName">
-                    <input class="form__input" type="text" name="lastName" id="lastName" placeholder="Nom">
-                    <label class="error_message" for="lastName" id="lastNameError">Veuillez saisir votre nom</label>
+                <div class="phone">
+                    <input type="tel" name="phone" id="phone" placeholder="Tel : +33(0)600000000">
+                    <label class="error_message" for="phone" id="phoneError">Veuillez saisir un numéro de téléphone valide</label>
+                </div>
+                    
+                <div class="adresse">
+                    <input type="text" name="adresse" id="adresse" placeholder="Adresse">
+                    <label class="error_message" for="adresse" id="adresseError">Veuillez saisir votre adresse</label>
                 </div>
             </div>
 
-            <div class="form__phone">
-                <input class="form__input" type="tel" name="phone" id="phone" placeholder="Tel : +33(0)600000000">
-                <label class="error_message" for="phone" id="phoneError">Veuillez saisir un numéro de téléphone valide</label>
-            </div>
 
-            <div class="adresse__street">   
-                <input class="form__input" type="text" name="street" id="street" placeholder="Rue">
-                <label class="error_message" for="street" id="streetError">Veuillez saisir votre rue</label>
-            </div>
-
-            <div class="form__adresse">
-                <div class="adresse__codePostal">
-                    <input class="form__input" type="text" name="codePostal" id="codePostal" placeholder="Ex : 62000">
-                    <label class="error_message" for="codePostal" id="codePostalError">Veuillez saisir votre code postal</label>
-                </div>
-               
-                <div class="adresse__city">
-                    <input class="form__input" type="text" name="city" id="city" placeholder="Ville">
-                    <label class="error_message" for="city" id="cityError">Veuillez saisir votre ville</label>
-                </div>
-            </div>
-
-            <h2>Taille de la pizza</h2>
-            <div class="pizza__size">
-                <div>
-                    <input type="radio" name="small" id="small">
-                    <label for="small">S</label>
-                </div>
-                <div>
-                    <input type="radio" name="medium" id="medium">
-                    <label for="medium">M</label>
-                </div>
-                <div>
-                    <input type="radio" name="large" id="large">
-                    <label for="large">L</label>
-                </div>
-            </div>
-
-            <h2>Ingrédients</h2>
-            <div class="ingrédients">
-                <label for="viande">Viande</label>
-                <select name="viande" id="viande">
-                    <option value="" id="viande_null">--Veuillez choisir votre viande--</option>
-                    <option value="boeuf_haché" id="boeuf">boeuf haché</option>
-                    <option value="poulet" id="poulet">poulet</option>
-                    <option value="jambon" id="jambon">jambon</option>
+            <div class="form__size">
+                <h2>Taille de la pizza</h2>
+                <select name="size" id="size">
+                    <option value="" id="sizeNul">--Veuillez sélectionner la taille de votre pizza</option>
+                    <option value="small" id="small">Small 5€</option>
+                    <option value="medium" id="medium">Medium 7€</option>
+                    <option value="large" id="large">Large 9€</option>
                 </select>
-                <label class="error_message" for="viande" id="viandeError">Veuillez choisir une viande</label>
-                <p>Toutes nos pizzas sont à la sauce tomate et au gruyère rapé</p>
+                
+                <label class="error_message" id="sizeError">Veuillez choisir la taille de votre pizza</label>
             </div>
 
-            <textarea name="commentaires" id="commentaires" cols="30" rows="10" placeholder="Commentaires"></textarea>
+            <div class="form__choixPizza">
+                <h2>Choix de votre pizza</h2>
+                    <select name="choixPizza" id="choixPizza">
+                        <option value="" id="choixNul">--Veuillez choisir votre pizza</option>
+                        <option value="nordiste" id="nordiste">Nordiste (poulet, maroilles, crème fraiche) 6€</option>
+                        <option value="montagnard" id="montagnard">Montagnard (lardon, pomme de terre, crème fraiche) 5€</option>
+                        <option value="viande" id="viande">Toutes viandes (boeuf, poulet, merguez, sauce tomate) 8€</option>
+                    </select>
+
+                    <label class="error_message" for="viande" id="choixError">Veuillez choisir une viande</label>
+            </div>
+
+            <textarea class="form__commentaires" name="commentaires" id="commentaires" cols="30" rows="10" placeholder="Commentaires"></textarea>
+
+            <h2 class="total" id="total"></h2>
 
             <button class="form__submit" type="submit">Commander</button>
+            <button class="reset">Annuler</button>
         </form>
-        <button class="reset">Annuler</button>
+
 
     </main>
+
     <script src="./app.js"></script>
 </body>
 </html>
