@@ -43,7 +43,7 @@
                     <option value="large" id="large">Large 9€</option>
                 </select>
                 
-                <label class="error_message" id="sizeError">Veuillez choisir la taille de votre pizza</label>
+                <label for="size" class="error_message" id="sizeError">Veuillez choisir la taille de votre pizza</label>
             </div>
 
             <div class="form__choixPizza">
@@ -55,12 +55,12 @@
                         <option value="viande" id="viande">Toutes viandes (boeuf, poulet, merguez, sauce tomate) 8€</option>
                     </select>
 
-                    <label class="error_message" for="viande" id="choixError">Veuillez choisir une viande</label>
+                    <label class="error_message" for="choixPizza" id="choixError">Veuillez choisir une viande</label>
             </div>
 
             <textarea class="form__commentaires" name="commentaires" id="commentaires" cols="30" rows="10" placeholder="Commentaires"></textarea>
 
-            <h2 class="total" id="total"></h2>
+            <h2 class="total" id="total">Total = </h2>
 
             <button class="form__submit" type="submit">Commander</button>
             <button class="reset">Annuler</button>
