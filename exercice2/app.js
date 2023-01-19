@@ -26,21 +26,6 @@ form.addEventListener('submit', (event) => {
         choixPizza: document.querySelector('#choixError'),
     }
   
-    // const sizePrice = {
-    //         small: 5,
-    //         medium: 7,
-    //         large: 9,
-    // }
-    // const choixPrice = {
-    //         nordiste : 6,
-    //         montagnard : 5,
-    //         viande: 8,
-    // }
-        
-    // const total = document.querySelector('#total');
-    // let totalPrice = sizePrice[sizePizza.value] + choixPrice[choixPizza.value];
-    // total.textContent = `Total = ${totalPrice} €`;
-    
     
     const nameRegex = /^[a-zA-Z ]+$/;
     const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
