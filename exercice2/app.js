@@ -32,13 +32,13 @@ form.addEventListener('submit', (event) => {
     const adresseRegex = /^[a-zA-Z0-9\s,'-]*$/;
     
     if (!userChoice.name || !userChoice.phone || !userChoice.adresse || userChoice.sizePizza === "" || userChoice.choixPizza === "") {
-        if (!userChoice.name || !nameRegex.test(userChoice.name)) {
+        if (!userChoice.name && !nameRegex.test(userChoice.name)) {
             errors.name.style.display = 'block';
         }
-        if (!userChoice.phone || !phoneRegex.test(userChoice.phone)) {
+        if (!userChoice.phone && !phoneRegex.test(userChoice.phone)) {
             errors.phone.style.display = 'block';
         }
-        if (!userChoice.adresse || !adresseRegex.test(userChoice)) {
+        if (!userChoice.adresse && !adresseRegex.test(userChoice)) {
             errors.adresse.style.display = 'block';
         }
         if (userChoice.sizePizza === "") {
@@ -51,10 +51,10 @@ form.addEventListener('submit', (event) => {
         console.log(userChoice);
         alert('Votre commande est bien enregistrée ! Merci pour votre confiance.')
         form.reset();
-        total.reset();
-    }
+    };
     
-})
+    total.reset();
+});
 
 
 const resetButton = document.querySelector('.reset');
@@ -67,7 +67,6 @@ resetButton.addEventListener('click', (event) => {
 
 // evenement change au changement des selects, vérifie si ils sont valide et alors ajoute total
 
-
 const sizePizza = document.querySelector('#size');
 const choixPizza = document.querySelector('#choixPizza');
 let totalPrice = 0;
@@ -76,19 +75,18 @@ const sizePrice = {
     small: 5,
     medium: 7,
     large: 9,
-}
+};
 
 const choixPrice = {
     nordiste : 6,
     montagnard : 5,
     viande: 8,
-}
+};
 
 let pizzaSizeValue = 0;
 let pizzaChoice = 0;
 
 sizePizza.addEventListener('change', () => {
-
     if (sizePizza.value !== "" && choixPizza!== "") {
         if (["small", "medium", "large"].includes(sizePizza.value)) {
             pizzaSizeValue = sizePrice[sizePizza.value];
@@ -112,4 +110,4 @@ choixPizza.addEventListener('change', () => {
         pizzaChoice = 0;
         total.textContent = `Total = €`
     }    
-})
+});
